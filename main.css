@@ -1,0 +1,167 @@
+body{
+    margin: 0%;
+    
+}
+
+.main{
+    background-color: lightseagreen;
+    color: white;
+    margin: auto;
+    padding: 1%;
+    text-align: center;
+    font-size: x-large;
+}
+#mybody{
+    border: 3px lightseagreen solid;
+    min-height: 70vh;
+}
+#welcome{
+    min-height: 70vh;
+    /* display: none;*/
+}
+#myapp{
+    min-height: 70vh;
+    display: none;
+}
+#welcome div:first-child,#myradios{
+    font-size: larger;
+    padding: 1%;
+    text-align: center;
+    text-decoration: underline;
+}
+#singlediv,#multiplediv{
+    text-align: center;
+    width: 60%;
+    border: 3px lightseagreen solid;
+    border-radius: 2%;
+    padding: 2%;
+    margin: auto;
+}
+#myfilesingle{
+    display: block;
+    width: 45%; border: 3px lightseagreen solid; margin: auto; padding: 2%;
+}
+#singlediv button,#multiplediv button{
+    display: block; background-color: lightseagreen; color: white; margin: auto; width: 20%;
+    padding: 1%;
+}
+#mymultidialog>div:first-child{
+    border: 3px lightseagreen solid; padding: 3%;
+}
+#mymultidialog>div:last-child{
+    text-align: center; padding: 3%;
+}
+#mymultidialog>div:last-child button{
+    background-color: lightseagreen; color: white; padding: 2%; 
+}
+#imgrid{
+    display: grid;
+    
+    width:70%; margin: auto; 
+}
+#singleapp,#multiapp{
+    display: grid;
+    grid-template-columns: 75% 25%; height: 70vh;
+}
+#shapes1,#shapes2{
+    display: grid;
+}
+
+#maincanvas{ height: inherit;
+             display: grid; 
+             grid-template-rows: 15% 85%;
+             grid-template-columns: 100%;
+}
+
+#singbuttons,#multiplediv1{
+    display: grid;
+    /*grid-template-columns: 2fr 1fr 1fr 4fr;*/
+    grid-template-columns: 20% 10% 10% 60%;
+}
+#incoord,#incoord2{
+    display: grid; grid-template-columns: 25% 25% 25% 25%;
+}
+#incoord input,#incoord2 input{
+    /*display: block;*/ width: 70%;
+}
+
+
+#sidebar1{
+    border: 3px lightseagreen solid; min-height: 70vh;
+}
+#sidebar1 h4{text-align: center;}
+
+#shapes1 button,#circleptsok,#shapes2 button{
+    background-color: lightseagreen; color: white; padding: 1%;
+}
+#shapes1 button:active,#shapes2 button:active{
+    background-color: rgb(32, 178, 69); color: white; padding: 1%;
+}
+#shapes1 button:hover,#shapes2 button:hover{
+    background-color: rgb(178, 139, 32); color: white; padding: 1%;
+}
+#result1,#result2{border: 3px lightseagreen solid;
+        overflow-y: auto;
+}
+#export1div,#export2div{text-align: center;}
+#export1div button,#export2div button{
+    background-color: lightseagreen; color: white; padding: 1%; width:40%;
+}
+#circledialog div{text-align: center;}
+
+
+
+#maincanvas2{ height: inherit;
+    display: grid; 
+    grid-template-rows: 10% 10% 80%;
+    grid-template-columns: 100%;
+}
+#sidebar2{
+    border: 3px lightseagreen solid; min-height: 70vh;
+}
+#sidebar2 h4{text-align: center;}
+#multiplediv2{
+    display: grid;
+    grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+    text-align: center;
+}
+#multiplediv2 button{
+    background-color: lightseagreen; color: white; padding: 1%; height: 70%;
+}
+#shapefix{
+    height: 100%;
+    display: grid;
+    
+}
+#shapefix input{
+    height: 100%;
+}
+
+#imagechooser1{
+    height : 60vh;
+    
+    width:40%;
+}
+#contain{
+    display: grid; height: inherit;
+    grid-template-rows: 15% 78% 7%;
+}
+#mcontent{
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+#imdiagok,#imdiagclose{
+    background-color: lightseagreen; color: white; padding: 1%;
+}
+#dlist{
+    display: grid; 
+    grid-template-columns: 50% 50%;
+    overflow-y: auto;
+    border: 3px solid lightseagreen;
+}
+#imagechooser1>div:nth-last-child(1){
+    text-align: center;
+}
+#imagechooser1 h3{
+    background-color: lightseagreen; color: white;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ob-uv composer</title>
+        <link href="main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main"><h1>OB-UV COMPOSER</h1>
+                          <h3>Set up your uv-coordinates</h3>
+        </div>
+        <div id="mybody">
+            <div id="welcome">
+                <div><h4>Choose Image Type</h4></div>
+                <div id="myradios">
+                    <input type="radio" name="imagetype" value="single" checked>
+                    <span>Single</span>
+                    <input type="radio" name="imagetype" value="multiple">
+                    <span>Multiple</span>
+                </div>
+                <div id="singlediv">
+                   <h4>Select Image</h4> 
+                   <input type="file" accept="image/*" id="myfilesingle">
+                   <button>OK</button>
+                   
+                </div>
+                <div id="multiplediv">
+                    <h4>Choose Output Image Size</h4>
+                    <div><input type="radio" name="imagesize" value="512x512" checked>
+                        <span>512 x 512</span></div>
+                    <div><input type="radio" name="imagesize" value="1024x1024" >
+                        <span>1024 x 1024</span></div>
+                    <div><input type="radio" name="imagesize" value="2048x2048" >
+                        <span>2048 x 2048</span></div>
+                    <div><input type="radio" name="imagesize" value="4096x4096" >
+                        <span>4096 x 4096</span></div>
+                        <button>OK</button>   
+                       
+                </div>
+
+                <dialog id="mymultidialog">
+                    <div>
+                        <h4>Choose Image Grid Size</h4>
+                        <div id="imgrid">
+                            <input type="number" max="40" min="1" id="gridsize">
+                            <span></span>
+                        </div>
+                        <div>
+                            <h4>Select Images</h4>
+                            <input type="file"  accept="image/*" multiple id="myfilemultiple">
+                        </div>
+                    </div>
+                    <div><button>OK</button><button>CANCEL</button></div>
+                </dialog>
+            </div>
+            
+
+
+
+            <div id="myapp">
+                <div id="singleapp">
+                    
+                    <div id="maincanvas">
+                        <div id="singbuttons">
+                           <div><button class="remove1">Remove All</button><button class="remove2">Remove Last</button></div>
+                           <div>Shape Color: <input id="shapecol1" type="color"></div>
+                           <div><span>COORDS:</span></div>
+                           <div id="incoord">
+                            <div><label for="u1">u:</label><input name="u" type="text" id="u1" maxlength="5"></div>
+                            <div><label for="v1">v:</label><input name="v" type="text" id="v1" maxlength="5"></div>
+                            <div><label for="x1">x:</label><input name="x" type="text" id="x1" maxlength="5"></div>
+                            <div><label for="y1">y:</label><input name="y" type="text" id="y1" maxlength="5"></div>
+                           </div> 
+                        </div>
+                        <div id="canvarea"><canvas id="drawarea1"></canvas></div>
+                        
+                    </div>
+                    <div id="sidebar1">
+                        <div id="shapes1">
+                            <h4>Choose Shape</h4>
+                            <button class="rectbtn">Rectangle</button>
+                            <button class="circlebtn">Circle</button>
+                            <button class="polybtn">Polygon</button>             
+                        </div>
+                        <div id="result1">
+                            <h4>Result</h4>
+                        </div>
+                        <div id="export1div"><button>Export</button></div>
+                    </div>
+                </div>
+                
+                <dialog id="circledialog">
+                    <p>
+                        <div><h4>Number of points around the circle</h4></div>
+                    </p>
+                    <div>
+                        <input type="number" id="circlepts" min="4">
+                    </div>
+                    <div><button id="circleptsok">OK</button></div>
+                </dialog>
+                
+                
+                
+                
+                
+                
+                <dialog id="imagechooser1">
+                    <div id="contain">
+                       <h3>Image Chooser</h3>
+                       <div id="mcontent">
+                          <div id="dlist"></div>
+                          <div id="setup">
+                            <h4>Image Size</h4>
+                            <div>
+                                <div><input type="radio" name="imsize" id="imwhole" value="whole"> Whole Image</div>
+                                <div><input type="radio" name="imsize" id="impart" value="part"> Image Portion</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div><button id="imdiagok">OK</button><button id ="imdiagclose">CANCEL</button></div>
+                    </div>
+                </dialog> 
+                
+                
+                <div id="multiapp">
+                    
+
+                    <div id="maincanvas2">
+                        <div id="multiplediv1">
+                           <div><button class="remove1">Remove All</button><button class="remove2">Remove Last</button></div>
+                           <div id="shapefix"><div><input id="shapecol2" type="color"></div></div>
+                           <div><span>COORDS:</span></div>
+                           <div id="incoord2">
+                            <div><label for="u2">u:</label><input name="u" type="text" id="u2" maxlength="5"></div>
+                            <div><label for="v2">v:</label><input name="v" type="text" id="v2" maxlength="5"></div>
+                            <div><label for="x2">x:</label><input name="x" type="text" id="x2" maxlength="5"></div>
+                            <div><label for="y2">y:</label><input name="y" type="text" id="y2" maxlength="5"></div>
+                           </div> 
+                        </div>
+                        <div id="multiplediv2">
+                            <div><button id="selectmd">Select</button></div>
+                            <div><button id="assignall">Assign All</button></div>
+                            <div><button id="assign1">Assign Single</button></div>
+                            <div><button id="splithorz">Split Horizontal</button></div>
+                            <div><button id="splitvert">Split Vertical</button></div>
+                            <div><button id="splitgrid">Split Grid</button></div>
+                        </div>
+                        <div id="canvarea2"><canvas id="drawarea2"></canvas></div>
+                        
+                    </div>
+
+                    <div id="sidebar2">
+                        <div id="shapes2">
+                            <h4>Choose Shape</h4>
+                            <button class="rectbtn">Rectangle</button>
+                            <button class="circlebtn">Circle</button>
+                            <button class="polybtn">Polygon</button>             
+                        </div>
+                        <div id="result2">
+                            <h4>Result</h4>
+                        </div>
+                        <div id="export2div"><button>Export</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
